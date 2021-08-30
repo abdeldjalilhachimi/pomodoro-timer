@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+:root {
+  --primary-color: #52b38a;
+  --secondry-color: #4f2e96;
+  --bg-color: #e0dedf;
+  --fnt-family: "Poppins", sans-serif;
+  --font-we-normal: 200;
+  --font-we-ruglar: 400;
+  --font-we-bold: 600;
+  --font-color: #404241;
+}
+body {
+  font-size: 15px;
+  font-family: var(--fnt-family);
+  background-image: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondry-color)
+  );
+  display: grid;
+  place-items: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 30rem;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  min-height: auto;
+  border-radius: 5px;
+}
+.p-timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 3rem;
+}
+.p-timer .btn-settings {
+  display: flex;
+  flex-direction: column;
+}
+.p-timer :is(.btn__setbreak, .btn__setwork) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0.5rem;
+}
+.p-timer :is(.btn__setbreak, .btn__setwork) label {
+  font-family: var(--fnt-family);
+  font-weight: var(--font-we-normal);
+  margin-bottom: 0.32rem;
+}
+.p-timer :is(.btn__setbreak, .btn__setwork) span {
+  margin: 0.3rem auto;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  color: white;
+  border-radius: 50%;
+  background-color: var(--secondry-color);
+}
+
+.p-timer .main-time {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.p-timer .main-time .time-progress {
+  font-size: 2.8rem;
+  font-weight: var(--font-we-bold);
+}
+.p-timer .main-time .time-progress {
+  margin-top: -0.9rem;
+}
+
+.p-timer .time-progress .circle-progress {
+  stroke-dasharray: 627;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.p-timer .btn-actions button {
+  padding: 0.5rem;
+  width: 5rem;
+  border: none;
+  color: white;
+  font-weight: var(--font-we-bold);
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondry-color)
+  );
+  border-radius: 3px;
+}
